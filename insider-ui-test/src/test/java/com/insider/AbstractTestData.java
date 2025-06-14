@@ -1,6 +1,5 @@
-package com;
+package com.insider;
 
-import com.insider.WebUiTestApplication;
 import com.insider.annotations.component.GetPage;
 import com.insider.cookie.CookieManager;
 import com.insider.page.homepage.UseInsiderHomePage;
