@@ -45,7 +45,6 @@ src/
 
 - **Java 17** veya üzeri
 - **Gradle 7.0** veya üzeri
-- İnternet bağlantısı (WebDriverManager için)
 
 ### Kurulum
 
