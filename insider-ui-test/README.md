@@ -32,7 +32,6 @@ src/
 │   └── WebUiTestApplication.java
 ├── main/resources/
 │   ├── application.yml      # Uygulama konfigürasyonu
-│   ├── webdriver.properties # WebDriver ayarları
 │   └── banner.txt          # Uygulama banner'ı
 └── test/java/com/insider/
     ├── AbstractTestData.java
