@@ -16,6 +16,11 @@ val junitVersion = "5.10.0"
 val mockitoVersion = "5.7.0"
 val lombokVersion = "1.18.30"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
 dependencies {
     implementation(
         group = "org.springframework.boot",

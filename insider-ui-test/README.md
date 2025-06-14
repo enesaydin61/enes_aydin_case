@@ -42,7 +42,7 @@ src/
 
 ### Gereksinimler
 
-- **Java 17** veya üzeri
+- **Java 21** veya üzeri
 - **Gradle 7.0** veya üzeri
 
 ### Kurulum
