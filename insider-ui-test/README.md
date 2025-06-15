@@ -2,7 +2,7 @@
 
 ## 📋 Proje Hakkında
 
-Bu proje, **Insider şirketinin kariyer sayfası** için otomatik UI testleri gerçekleştiren bir **Spring Boot** uygulamasıdır. **Selenium WebDriver** kullanarak **Page Object Model (POM)** tasarım deseni ile geliştirilmiştir.
+Bu proje, **Insider şirketinin kariyer sayfası** için otomatik UI testleri gerçekleştiren bir **Spring Boot** uygulamasıdır. **Selenium WebDriver** kullanarak **Page Object Model (POM)** tasarım deseni ile geliştirilmiş ve **AI destekli test otomasyon** özellikleri içermektedir.
 
 ## 🛠️ Teknolojiler
 
@@ -10,11 +10,35 @@ Bu proje, **Insider şirketinin kariyer sayfası** için otomatik UI testleri ge
 - **Selenium WebDriver** (4.15.0)
 - **WebDriverManager** (5.6.2)
 - **JUnit 5** (5.10.0)
-- **Mockito** (5.7.0)
 - **Lombok** (1.18.30)
 - **Gradle** (Build Tool)
-- **Jackson** (JSON Processing)
-- **Apache Commons Lang3**
+- **Google Genai** (AI/LLM Entegrasyonu)
+
+## 🤖 AI Destekli Test Otomasyon Özellikleri
+
+### AIFactory Interface
+Proje, **doğal dil işleme** ve **AI destekli test otomasyon** için `AIFactory` interface'ini kullanmaktadır:
+
+#### Temel Özellikler:
+- **🧠 LLM Entegrasyonu**: Google Gemini 2.0 Flash modeli ile doğal dil komutlarını test aksiyonlarına dönüştürme
+- **🌳 DOM Analizi**: Sayfa elementlerini otomatik analiz etme ve interaktif elementleri tespit etme
+- **📝 Doğal Dil Testleri**: "Login sayfasına git ve kullanıcı adı gir" gibi doğal dil komutlarıyla test yazma
+- **🎯 Otomatik Aksiyon Çalıştırma**: AI'ın önerdiği aksiyonları otomatik olarak Selenium ile çalıştırma
+
+#### Kullanım Örneği:
+```java
+// Doğal dil komutu ile test çalıştırma
+homePage.ai("Login formunu doldur ve giriş yap");
+
+// Belirli bir sayfa sınıfı ile AI kullanımı
+LoginPage loginPage = homePage.ai(LoginPage.class, "Kullanıcı girişi yap");
+```
+
+#### Teknik Detaylar:
+- **DOM Tree Çıkarma**: JavaScript ile sayfa elementlerini analiz etme
+- **JSON Response**: AI'dan gelen yanıtları structured format'ta işleme
+- **XPath Tabanlı**: Element lokasyonu için XPath kullanımı
+- **Environment Variables**: `GEMINI_API_KEY` çevre değişkeni gerekli
 
 ## 📁 Proje Yapısı
 
