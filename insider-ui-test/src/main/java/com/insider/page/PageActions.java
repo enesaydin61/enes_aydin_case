@@ -3,7 +3,7 @@ package com.insider.page;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class PageActions<P> extends AbstractPage implements Actions<P> {
+public class PageActions<P> extends AbstractPage implements Actions<P>, AIFactory<P> {
 
   @Override
   public P go(String url) {

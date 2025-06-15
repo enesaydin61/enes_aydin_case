@@ -15,6 +15,7 @@ val jacksonVersion = "2.16.0"
 val junitVersion = "5.10.0"
 val mockitoVersion = "5.7.0"
 val lombokVersion = "1.18.30"
+val googleGenAIVersion = "1.3.0"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21
@@ -108,5 +109,10 @@ dependencies {
         group = "org.mockito",
         name = "mockito-junit-jupiter",
         version = mockitoVersion
+    )
+    implementation(
+        group = "com.google.genai",
+        name = "google-genai",
+        version = googleGenAIVersion
     )
 } 

@@ -53,6 +53,26 @@ public class InsiderCareersQAJobListingsTest extends AbstractTestData {
   }
 
   @WebTest
+  @Description("Yukarıdaki case'in ai stepli hali")
+  public void testCareersPageNavigationAndJobListingsLoadMoreWithAI() {
+    CareersPage careersPage = useInsiderHomePage
+        .mouseHoverNavbarDropdownMenuLink()
+        .ai(CareersPage.class, "Careers menüye tıkla");
+
+    assertThat(careersPage.getCurrentUrl()).startsWith(CareersPageUrls.CAREERS);
+    assertThat(careersPage.allLocationTexts()).containsExactlyInAnyOrderElementsOf(LOCATIONS);
+
+    var jobImageSize = careersPage
+        .scrollLoadMoreButton()
+        .getJobImageSize();
+
+    careersPage.ai("See all teams butona tıkla");
+
+    assertFalse(careersPage.isDisplayedLoadMoreButton());
+    assertThat(jobImageSize).isLessThan(careersPage.getJobImageSize());
+  }
+
+  @WebTest
   @Description("""
       Quality Assurance careers sayfasına gidilir, "See all QA jobs" butonuna tıklanır,
       işler "Istanbul, Turkey" lokasyonu ve "Quality Assurance" departmanı ile filtrelenir,
