@@ -38,7 +38,7 @@ LoginPage loginPage = homePage.ai(LoginPage.class, "Kullanıcı girişi yap");
 - **DOM Tree Çıkarma**: JavaScript ile sayfa elementlerini analiz etme
 - **JSON Response**: AI'dan gelen yanıtları structured format'ta işleme
 - **XPath Tabanlı**: Element lokasyonu için XPath kullanımı
-- **Environment Variables**: `GEMINI_API_KEY` çevre değişkeni gerekli
+- **Environment Variables**: `GEMINI_API_KEY` 
 
 ## 📁 Proje Yapısı
 
